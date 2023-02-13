@@ -19,6 +19,8 @@ jobs:
       # Test run
       - name: Run a one-line script
         run: echo Hello, build your pages.
+      - run: pwd
+      - run: ls -l
       
       # Python und requirements
       - name: setup python
