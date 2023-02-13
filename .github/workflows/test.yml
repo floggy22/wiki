@@ -35,8 +35,7 @@ jobs:
       - name: confirm buildability
         run: python -m mkdocs build --clean --verbose
       
-      - name: deploy to gh-pages
-        if: ${{ github.ref == 'refs/heads/main' }}
+      - name: deploy to gh-pages        
         run: python -m mkdocs gh-deploy --clean --force
 
 
