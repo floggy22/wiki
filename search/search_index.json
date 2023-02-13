@@ -1,1 +1,1 @@
-{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"das ist ein Test","text":""},{"location":"#bla","title":"bla","text":""}]}
+{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"das ist ein Test","text":""},{"location":"#bla","title":"bla","text":""},{"location":"seite2/","title":"das ist ein Test","text":""},{"location":"seite2/#bla","title":"bla","text":""},{"location":"ordner/","title":"Seite","text":""}]}
