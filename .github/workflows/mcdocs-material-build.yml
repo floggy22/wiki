@@ -1,4 +1,4 @@
-name: mcdocs-material-build
+name: mkdocs-material-build
 on:
   push:
     branches: 
@@ -21,21 +21,22 @@ jobs:
 
       # Test run
       - name: Run a one-line script
-        run: echo Hello, build your pages.
-      - run: pwd
-      - run: ls -l
+        run: echo Hello, build your pages...      
       
       # Python und requirements
       - name: setup python
         uses: actions/setup-python@v4        
         with:
-          python-version: '3.11'          
-      - run: python -m pip install -r ./docs/requirements-mkdocs.txt
+          python-version: '3.11'
+      
+      - name: install mkdocs and stuff          
+        run: python -m pip install -r ./docs/requirements-mkdocs.txt
 
       - name: confirm buildability
         run: python -m mkdocs build --clean --verbose
       
-      - name: deploy to gh-pages        
+      - name: deploy to gh-pages 
+        if: ${{ github.ref == 'refs/heads/main' }}       
         run: python -m mkdocs gh-deploy --clean --force
 
 
