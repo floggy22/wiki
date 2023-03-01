@@ -1,4 +1,5 @@
 name: mkdocs-material-build
+
 on:
   push:
     branches: 
@@ -11,7 +12,8 @@ permissions:
 
 jobs:
   mkdocs-material-gh-pages:    
-    runs-on: ubuntu-latest    
+    #runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, ARM64]
     
     steps:      
       - name: Checkout
