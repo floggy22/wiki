@@ -13,7 +13,7 @@ permissions:
 jobs:
   mkdocs-material-gh-pages:    
     #runs-on: ubuntu-latest
-    runs-on: [self-hosted, linux, ARM64]
+    runs-on: [self-hosted]
     
     steps:      
       - name: Checkout
